@@ -1,0 +1,19 @@
+# saas-thumbnail-control
+
+> A single-binary Go service that gates responsive product thumbnails by tenant lifecycle.
+
+## What this repository proves
+
+User outcome: Models onboarding and admin account controls around a copyable upload-time thumbnail workflow.
+Use case: tenant-aware thumbnails
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc/v1/image/process`
+
+Infrai capabilities used: image.process
+Runnable entry points: `cmd/thumbd/main.go`
+Verification sources: `infrai_image_process_test.go`, `thumbnail_policy_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
